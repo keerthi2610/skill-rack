@@ -1,0 +1,47 @@
+"""
+Message Encryption
+To encrypt messages jil will first decide on the number of the columns C to use. Then Jil will paid the message with letter chosen randomly so that they form a rectangle matrix.Finally jil will write down the message navigating the rows from left to right and then from right to left.
+
+The program must accept the encrypted messages M as input and then extract and print the original message(along with any additional padding letters) from the encrypted one base on the values of C.
+
+Example:
+
+Input:
+midinadiazne
+3
+Output:
+madeinindiaz
+
+Explanation:
+m i d
+a n i
+d i a
+e n z
+"""
+
+#Python Program:
+#Your code below
+m =input()
+n=int(input())
+l = []
+p=[]
+for i in range(0,len(m),n):
+    if(i%2==0):
+        s = m[i:i+n]
+        s = list(s)
+        l.append(s)
+    else:
+        s = m[i+(n-1):i-1:-1]
+        s = list(s)
+        l.append(s)
+j=0
+while(j<=n):
+    for i in range(len(l)):
+        for j in range(j,len(l[i])):
+            a = l[i][j]
+            p.append(a)
+            break
+    j = j+1
+print(*p,sep="")
+            
+    
