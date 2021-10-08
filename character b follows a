@@ -1,0 +1,29 @@
+"""
+Given a string S and two characters A, B the program must print the number of occurrences where A is followed by B.
+
+Example 1:
+
+Input:
+malayalam
+a
+l
+Output:
+2
+
+Explanation:
+The two occurrence where a is followed by l is a highlighted below malayalam.
+"""
+#Python code:
+#Your code below
+s = input().strip()
+a = input().strip()
+b = input().strip()
+count = 0
+for i in range(len(s)):
+    for j in range(i+1,len(s)):
+        if(s[i] == a and s[j] == b):
+            count =  count + 1
+        break
+print(count)
+        
+    
