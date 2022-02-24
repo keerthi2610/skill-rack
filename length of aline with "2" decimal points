@@ -1,0 +1,6 @@
+import math
+a,b = [float(x) for x in input().split()]
+x,y = [float(x) for x in input().split()]
+c = ((y-b)**2+(x-a)**2)
+c = math.sqrt(c)
+print(format(c ,".2f"))
