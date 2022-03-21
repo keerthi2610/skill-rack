@@ -1,0 +1,17 @@
+#Your code below
+n = int(input())
+d = {}
+for i in range(n):
+    k,v= map(str,input().split(""))
+    k.strip()
+    v.strip()
+    d[k]=v
+j = input().strip()
+if((j in d.keys()) or (j in d.values())):
+    for i,k in d.items():
+        if(k==j):
+            print(i)
+        elif(i==j):
+            print(k)
+else:
+    print("NONE")
