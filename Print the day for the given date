@@ -1,0 +1,39 @@
+PRINT THE DAY FOR A GIVEN DATE. ID:213
+
+
+The day corresponding to the first date of a given month is provided as input to the program. Then a specific date D of the month is provided. The program must  print the day (one among MON,TUE, WED, THU, FRI, SAT, SUN) of the date D.
+
+Input Format:
+First line will contain the day (one among MON,TUE, WED, THU, FRI, SAT, SUN) of the first date of the month.
+Second line will contain the value of the date D as an integer value.
+
+Output Format:
+First line will contain the day of the date D
+
+
+Sample Input/Output:
+
+Example 1:
+Input:
+MON
+10
+
+Output:
+WED
+
+Explanation:
+If it is Monday on 1st of the month, then 10th of the month will be a Wednesday. Hence WED is printed.
+
+PROGRAM:
+#Your code below
+s = input()
+n = int(input())
+l = ["MON","TUE","WED","THU","FRI","SAT","SUN"]
+i = l.index(s)
+while(n>7):
+    n = n%7
+if(n==7):
+    print(s)
+else:
+    v = n+i-1
+    print(l[v])
