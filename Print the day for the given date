@@ -36,4 +36,8 @@ if(n==7):
     print(s)
 else:
     v = n+i-1
-    print(l[v])
+    if(v>6):
+        v=v-6-1
+        print(l[v])
+    else:
+        print(l[v])
