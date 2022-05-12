@@ -34,4 +34,22 @@ Output:
 
 Explanation:
 Only 999 divided by 9 gives 111. Hence + must be replaced with /.
-
+ 
+ PROGRAM:
+ #Your code belo
+import re
+s = input()
+reg = "[+-/*=]"
+k=[]
+l = re.split(reg,s)
+for i in l:
+    i=int(i)
+    k.append(i)
+if((k[0]*k[1])==k[2]):
+    print("*")
+elif((k[0]-k[1])==k[2]):
+    print("-")
+elif((k[0]+k[1])==k[2]):
+    print("+")
+else:
+    print("/")
