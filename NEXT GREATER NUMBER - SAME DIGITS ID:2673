@@ -1,0 +1,58 @@
+NEXT GREATER NUMBER - SAME DIGITS ID:2673
+
+
+
+A number N is passed as the input. The program must print the next greater number with the same digits.
+
+Input Format:
+First line will contain the value of N.
+
+Output Format:
+First line will contain the next greater number with the same digits.
+
+Boundary Conditions:
+1 <= N <= 99999999999999
+
+Example Input/Output 1:
+Input:
+12
+
+Output:
+21
+
+Example Input/Output 2:
+Input:
+195
+
+Output:
+519
+
+
+PROGRAM IN PYTHON:
+#Your code below
+n = list(map(int,input()))
+p=len(n)
+k=len(n)-1
+c=0
+l=[]
+d=[]
+flag = 1
+for j in range(k,0,-1):
+    if(flag):
+        for i in range(j-1,-1,-1):
+            if(n[i]<=n[j]):
+                temp=n[i]
+                n[i]=n[j]
+                n[j]=temp
+                c=c+i
+                flag=0
+                break
+for i in range(c+1):
+    d.append(n[i])
+for i in range(c+1,p):
+    l.append(n[i])
+l.sort()
+for i in range(len(l)):
+    d.append(l[i])
+print(*d,sep="")
+
